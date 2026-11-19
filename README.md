@@ -3,11 +3,19 @@
 A chess engine in at most 4,096 bytes of Python, written for the
 make.fun **tiny-chess-01** competition.
 
-`main.py` is the whole engine: a deterministic, node-capped negamax
-search (alpha-beta with quiescence, transposition table, null-move
-pruning and late-move reductions) over a hand-tuned evaluation with
-piece-square tables, bishop-pair and passed-pawn terms. It plays its
-games through the competition env over HTTP and never reads a clock,
-so every replayed trial makes the same moves.
+`main.py` is the whole engine (packed from a readable source with the
+kit's `makefun compress`): a deterministic negamax search — alpha-beta
+with PVS, quiescence (captures, promotions and check evasions), a
+transposition table, killer and history move ordering, null-move
+pruning, late-move reductions and check extensions — over a tapered
+piece-square-table evaluation. It searches to a fixed cap of 65,000
+nodes per move and never reads a clock, so every replayed trial makes
+the same moves. Positions already seen in the game score as draws in
+search, which keeps it from shuffling into threefold repetitions.
+
+On the kit's three 6-game practice trials it scored Elo 1545, 1364
+and 1451 (11 wins, 2 draws, 5 losses in all), above the house
+baseline's practice mean. It plays its games through the competition
+env over HTTP.
 
 MIT licensed — see `LICENSE`.
