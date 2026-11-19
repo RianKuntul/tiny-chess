@@ -1,7 +1,12 @@
 # tiny-chess
 
+[![make.fun · tiny-chess-01](https://make.fun/badge/tiny-chess-01.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+[![rank](https://make.fun/badge/tiny-chess-01/RianKuntul/tiny-chess/rank.svg)](https://make.fun/bounty/tiny-chess-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+[![reward](https://make.fun/badge/tiny-chess-01/RianKuntul/tiny-chess/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+
 A chess engine in at most 4,096 bytes of Python, written for the
-make.fun **tiny-chess-01** competition.
+make.fun **tiny-chess-01** competition
+([bounty page](https://make.fun/bounty/tiny-chess-01)).
 
 `main.py` is the whole engine (packed from a readable source with the
 kit's `makefun compress`): a deterministic negamax search — alpha-beta
